@@ -32,61 +32,67 @@
 
                         <div class="card-body">
                             <div id="alert" class="alert alert-danger" role="alert">
-                                Some fields are missing
+                                Some fields are missing or need to be fixed
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-5">
                                     <label for="cardNumber">Card #</label>
                                     <input type="text" class="form-control" id="cardNumber"
-                                        placeholder="XXXXXXXXXXXXXXX">
+                                        placeholder="XXXXXXXXXXXXXXX" required>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="cardCVC">CVC #</label>
-                                    <input type="password" class="form-control" id="cardCVC" placeholder="000">
+                                    <input type="password" class="form-control" id="cardCVC" placeholder="000" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="amount">Amount</label>
-                                    <input type="text" class="form-control" id="amount" placeholder="Amount">
+                                    <div class="input-group align-middle">
+                                        <i class="fas fa-dollar-sign mr-1"></i>
+                                        <input type="text" class="form-control inline"
+                                            id="amount" placeholder="Amount" required>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="firstName">First Name</label>
-                                    <input type="text" class="form-control" id="name">
+                                    <input type="text" class="form-control" id="firstName" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="lastName">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName">
+                                    <input type="text" class="form-control" id="lastName" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity">
+                                    <input type="text" class="form-control" id="inputCity" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputState">State</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Pick a state</option>
-                                        <option>...</option>
+                                    <select required id="inputState" class="form-control">
+                                        <option selected value="">Pick a state</option>
+                                        <option value="ny">New York</option>
+                                        <option value="california">California</option>
+                                        <option value="sanfrancisco">San Francisco</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip">Postal Code</label>
-                                    <input type="text" class="form-control" id="inputZip">
+                                    <input type="text" class="form-control" id="inputZip" required>
                                 </div>
                             </div>
                             <div class="form-row d-flex justify-content-between">
-                                <div class="col-6 col-lg-4">
+                                <div class="col-12 col-md-6 col-lg-4">
                                     <label class="block"> We accept</label>
                                     <div
                                         class="form-group bg-secondary text-white p-2 rounded d-flex justify-content-between">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="mastercard" value="mastercard">
+                                                id="mastercard" value="mastercard" checked>
                                             <label class="form-check-label" for="mastercard"><i
                                                     class="fab fa-2x fa-cc-mastercard"></i></label>
                                         </div>
@@ -113,7 +119,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-6">
+                                <div class="form-group col-12 col-md-6">
                                     <label for="exampleFormControlTextarea1">Message</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     <small id="passwordHelpBlock" class="form-text text-muted">
